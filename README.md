@@ -2,8 +2,10 @@ Documentation for ConvertEase Program
 
 Project Name:
 ConvertEase
+
 Made By:
 Hunain Zahid, Saad Bin Sharif, Umar Hayat
+
 Description:
 This project is a multifunctional program built in C++ to perform various calculations and conversions. It includes a calculator, profit and loss calculator, and various conversion tools for currency, temperature, and units.
 
