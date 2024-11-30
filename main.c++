@@ -2,7 +2,7 @@
 #include <cmath>
 using namespace std;
 
-
+void profitLossCalculator();
 void numberToRomanConversion();
 void unitConversion();
 
@@ -26,18 +26,48 @@ int main() {
 
         switch (choice) {
             
+
+            case 2: profitLossCalculator();
+            break;
+
+
             case 5: numberToRomanConversion();
             break;
+
             case 6: unitConversion();
             break;
+
             case 7: cout << "Exiting program. Goodbye!\n";
             break;
+
             default: cout << "Invalid choice. Please try again.\n";
         }
     } while (choice != 7);
 
     return 0;
 }
+
+
+//  Profit and Loss Calculator
+void profitLossCalculator() {
+    double costPrice, sellingPrice;
+    cout << "\n\t\t\t\t=== Profit and Loss Calculator ===\n\n";
+    cout << "Enter cost price: ";
+    cin >> costPrice;
+    cout << "Enter selling price: ";
+    cin >> sellingPrice;
+
+    if (sellingPrice > costPrice)
+        cout << "Profit: " << sellingPrice - costPrice << endl;
+    else if (sellingPrice < costPrice)
+        cout << "Loss: " << costPrice - sellingPrice << endl;
+    else
+        cout << "No profit, no loss.\n";
+}
+
+
+
+
 
 
 //  Numbers to Roman Conversion
