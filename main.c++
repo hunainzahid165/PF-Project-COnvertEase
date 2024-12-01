@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 void calculator();
@@ -156,13 +155,13 @@ void currencyConversion() {
             cout << "Converted Amount: " << amount / 283.0 << " USD\n";
             break;
         case 3:
-            cout << "Converted Amount: " << amount * 375.0 << " PKR\n";  // Assume 1 Pound = 375 PKR
+            cout << "Converted Amount: " << amount * 375.0 << " PKR\n";  
             break;
         case 4:
             cout << "Converted Amount: " << amount / 375.0 << " Pound\n";
             break;
          case 5:
-            cout << "Converted Amount: " << amount * 750.0 << " PKR\n";  // Assume 1 Dinar = 750 PKR
+            cout << "Converted Amount: " << amount * 750.0 << " PKR\n";  
             break;
         case 6:
             cout << "Converted Amount: " << amount / 750.0 << " Dinar\n";
@@ -174,19 +173,19 @@ void currencyConversion() {
                 cin >> amount;
             switch(i){
                 case 1:
-            cout << "Converted Amount: " << amount * 283.0 << " PKR\n";  // Assume 1 USD = 283 PKR
+            cout << "Converted Amount: " << amount * 283.0 << " PKR\n"; 
             break;
         case 2:
             cout << "Converted Amount: " << amount / 283.0 << " USD\n";
             break;
         case 3:
-            cout << "Converted Amount: " << amount * 375.0 << " PKR\n";  // Assume 1 Pound = 375 PKR
+            cout << "Converted Amount: " << amount * 375.0 << " PKR\n";  
             break;
         case 4:
             cout << "Converted Amount: " << amount / 375.0 << " Pound\n";
             break;
          case 5:
-            cout << "Converted Amount: " << amount * 750.0 << " PKR\n";  // Assume 1 Dinar = 750 PKR
+            cout << "Converted Amount: " << amount * 750.0 << " PKR\n"; 
             break;
         case 6:
             cout << "Converted Amount: " << amount / 750.0 << " Dinar\n";
