@@ -4,6 +4,7 @@ using namespace std;
 
 void calculator();
 void profitLossCalculator();
+void currencyConversion();
 void temperatureConversion();
 void numberToRomanConversion();
 void unitConversion();
@@ -27,9 +28,14 @@ int main() {
         cin >> choice;
 
         switch (choice) {
-            
+
+            case 1: calculator();
+            break;
 
             case 2: profitLossCalculator();
+            break;
+
+            case 3: currencyConversion();
             break;
 
             case 4: temperatureConversion();
@@ -98,6 +104,44 @@ void profitLossCalculator() {
         cout << "No profit, no loss.\n";
 }
 
+//  Currency Conversion
+void currencyConversion() {
+    double amount;
+    int choice;
+    cout << "\n=== Currency Conversion ===\n";
+    cout << "1. USD to PKR\n2. PKR to USD\n";
+    cout << "3. Pound to PKR\n4. PKR to Pound\n";
+    cout << "5. Dinar to PKR\n6. PKR to Dinar\n";
+    cout << "Enter your choice: ";
+    cin >> choice;
+    cout << "Enter amount: ";
+    cin >> amount;
+
+    switch (choice) {
+        case 1:
+            cout << "Converted Amount: " << amount * 283.0 << " PKR\n";  // Assume 1 USD = 283 PKR
+            break;
+        case 2:
+            cout << "Converted Amount: " << amount / 283.0 << " USD\n";
+            break;
+        case 3:
+            cout << "Converted Amount: " << amount * 375.0 << " PKR\n";  // Assume 1 Pound = 375 PKR
+            break;
+        case 4:
+            cout << "Converted Amount: " << amount / 375.0 << " Pound\n";
+            break;
+         case 5:
+            cout << "Converted Amount: " << amount * 750.0 << " PKR\n";  // Assume 1 Dinar = 750 PKR
+            break;
+        case 6:
+            cout << "Converted Amount: " << amount / 750.0 << " Dinar\n";
+            break;
+        default:
+            cout << "Invalid choice.\n";
+    }
+}
+
+
 
 //  Temperature Conversion
 void temperatureConversion() {
@@ -110,6 +154,7 @@ void temperatureConversion() {
     cout << "4. Kelvin to Celsius\n";
     cout << "5. Fahrenheit to Kelvin\n";
     cout << "6. Kelvin to Fahrenheit\n";
+    cout << "7. Convert All\n";
     cout << "Enter your choice: ";
     cin >> choice;
     cout << "Enter temperature: ";
@@ -134,6 +179,34 @@ void temperatureConversion() {
         case 6:
             cout << "Temperature in Fahrenheit: " << ((temp - 273.15) * 9/5) + 32 << "°F\n";
             break;
+        case 7:
+        for(int i = 1; i<=6; i++){
+            cout << "\nConversion " << i << ":\n";
+                cout << "Enter value: ";
+                cin >> temp;
+            switch(i){
+                case 1:
+            cout << "Temperature in Fahrenheit: " << (temp * 9/5) + 32 << "°F\n";
+            break;
+        case 2:
+            cout << "Temperature in Celsius: " << (temp - 32) * 5/9 << "°C\n";
+            break;
+        case 3:
+            cout << "Temperature in Kelvin: " << temp + 273.15 << " K\n";
+            break;
+        case 4:
+            cout << "Temperature in Celsius: " << temp - 273.15 << "°C\n";
+            break;
+        case 5:
+            cout << "Temperature in Kelvin: " << ((temp - 32) * 5/9) + 273.15 << " K\n";
+            break;
+        case 6:
+            cout << "Temperature in Fahrenheit: " << ((temp - 273.15) * 9/5) + 32 << "°F\n";
+            break;
+            }
+
+        }
+        break;
         default:
             cout << "Invalid choice.\n";
     }
@@ -202,13 +275,13 @@ void unitConversion() {
             cout << "Value in Kilograms: " << value / 2.20462 << " kg\n";
             break;
         case 5:
-            cout << "Value in Inches: " << value * 39.3701 << " inches\n";  // 1 meter = 39.3701 inches
+            cout << "Value in Inches: " << value * 39.3701 << " inches\n";  
             break;
         case 6:
-            cout << "Value in Inches: " << value * 12.0 << " inches\n";  // 1 foot = 12 inches
+            cout << "Value in Inches: " << value * 12.0 << " inches\n";  
             break;
         case 7:
-            cout << "Value in Meters: " << value * 1000.0 << " meters\n";  // 1 km = 1000 meters
+            cout << "Value in Meters: " << value * 1000.0 << " meters\n";  
             break;
 
         case 8:
