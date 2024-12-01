@@ -112,10 +112,14 @@ void currencyConversion() {
     cout << "1. USD to PKR\n2. PKR to USD\n";
     cout << "3. Pound to PKR\n4. PKR to Pound\n";
     cout << "5. Dinar to PKR\n6. PKR to Dinar\n";
+    cout << "7. Convert all\n";
     cout << "Enter your choice: ";
     cin >> choice;
+
+    if(choice >= 1 && choice <= 6){
     cout << "Enter amount: ";
     cin >> amount;
+    }
 
     switch (choice) {
         case 1:
@@ -136,6 +140,34 @@ void currencyConversion() {
         case 6:
             cout << "Converted Amount: " << amount / 750.0 << " Dinar\n";
             break;
+        case 7:
+        for(int i = 1; i<=6; i++){
+            cout << "\nConversion " << i << ":\n";
+                cout << "Enter amount: ";
+                cin >> amount;
+            switch(i){
+                case 1:
+            cout << "Converted Amount: " << amount * 283.0 << " PKR\n";  // Assume 1 USD = 283 PKR
+            break;
+        case 2:
+            cout << "Converted Amount: " << amount / 283.0 << " USD\n";
+            break;
+        case 3:
+            cout << "Converted Amount: " << amount * 375.0 << " PKR\n";  // Assume 1 Pound = 375 PKR
+            break;
+        case 4:
+            cout << "Converted Amount: " << amount / 375.0 << " Pound\n";
+            break;
+         case 5:
+            cout << "Converted Amount: " << amount * 750.0 << " PKR\n";  // Assume 1 Dinar = 750 PKR
+            break;
+        case 6:
+            cout << "Converted Amount: " << amount / 750.0 << " Dinar\n";
+            break;
+            }
+
+        }
+        break;
         default:
             cout << "Invalid choice.\n";
     }
