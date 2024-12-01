@@ -3,6 +3,7 @@
 using namespace std;
 
 void profitLossCalculator();
+void temperatureConversion();
 void numberToRomanConversion();
 void unitConversion();
 
@@ -30,6 +31,8 @@ int main() {
             case 2: profitLossCalculator();
             break;
 
+            case 4: temperatureConversion();
+            break;
 
             case 5: numberToRomanConversion();
             break;
@@ -66,7 +69,45 @@ void profitLossCalculator() {
 }
 
 
+//  Temperature Conversion
+void temperatureConversion() {
+    double temp;
+    int choice;
+    cout << "\n\t\t\t\t=== Temperature Conversion ===\n\n";
+    cout << "1. Celsius to Fahrenheit\n";
+    cout << "2. Fahrenheit to Celsius\n";
+    cout << "3. Celsius to Kelvin\n";
+    cout << "4. Kelvin to Celsius\n";
+    cout << "5. Fahrenheit to Kelvin\n";
+    cout << "6. Kelvin to Fahrenheit\n";
+    cout << "Enter your choice: ";
+    cin >> choice;
+    cout << "Enter temperature: ";
+    cin >> temp;
 
+    switch (choice) {
+        case 1:
+            cout << "Temperature in Fahrenheit: " << (temp * 9/5) + 32 << "°F\n";
+            break;
+        case 2:
+            cout << "Temperature in Celsius: " << (temp - 32) * 5/9 << "°C\n";
+            break;
+        case 3:
+            cout << "Temperature in Kelvin: " << temp + 273.15 << " K\n";
+            break;
+        case 4:
+            cout << "Temperature in Celsius: " << temp - 273.15 << "°C\n";
+            break;
+        case 5:
+            cout << "Temperature in Kelvin: " << ((temp - 32) * 5/9) + 273.15 << " K\n";
+            break;
+        case 6:
+            cout << "Temperature in Fahrenheit: " << ((temp - 273.15) * 9/5) + 32 << "°F\n";
+            break;
+        default:
+            cout << "Invalid choice.\n";
+    }
+}
 
 
 
