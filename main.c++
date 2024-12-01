@@ -148,10 +148,15 @@ void unitConversion() {
     cout << "5. Meters to Inches\n";
     cout << "6. Feet to Inches\n";
     cout << "7. Kilometers to Meters\n";
+    cout << "8. Convert All\n";
     cout << "Enter your choice: ";
     cin >> choice;
-    cout << "Enter value: ";
-    cin >> value;
+
+
+    if (choice >= 1 && choice <= 7) {
+        cout << "Enter value: ";
+        cin >> value;
+    }
 
     switch (choice) {
         case 1:
@@ -175,6 +180,38 @@ void unitConversion() {
         case 7:
             cout << "Value in Meters: " << value * 1000.0 << " meters\n";  // 1 km = 1000 meters
             break;
+
+        case 8:
+            for (int i = 1; i <= 7; ++i) {
+                cout << "\nConversion " << i << ":\n";
+                cout << "Enter value: ";
+                cin >> value;
+                switch (i) {
+                    case 1:
+                        cout << "Value in Miles: " << value * 0.621371 << " miles\n";
+                        break;
+                    case 2:
+                        cout << "Value in Kilometers: " << value / 0.621371 << " km\n";
+                        break;
+                    case 3:
+                        cout << "Value in Pounds: " << value * 2.20462 << " lbs\n";
+                        break;
+                    case 4:
+                        cout << "Value in Kilograms: " << value / 2.20462 << " kg\n";
+                        break;
+                    case 5:
+                        cout << "Value in Inches: " << value * 39.3701 << " inches\n";
+                        break;
+                    case 6:
+                        cout << "Value in Inches: " << value * 12.0 << " inches\n";
+                        break;
+                    case 7:
+                        cout << "Value in Meters: " << value * 1000.0 << " meters\n";
+                        break;
+                }
+            }
+        break:
+        
         default:
             cout << "Invalid choice.\n";
     }
