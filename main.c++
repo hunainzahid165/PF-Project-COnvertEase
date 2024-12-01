@@ -60,27 +60,54 @@ int main() {
 
 //  Calculator
 void calculator() {
-    char op;
+    int method;
     double num1, num2;
     cout << "\n\t\t\t\t=== Calculator ===\n\n";
+    
+    
+    cout << "1. For Addition\n2. For Subtraction\n3. For Multiplication\n4. For Division\n5. For All";
+    cout << "\nEnter method ";
+    cin >> method;
+
+    if(method >=1 && method <= 4){
     cout << "Enter first number: ";
     cin >> num1;
-    cout << "Enter operator (+, -, *, /): ";
-    cin >> op;
     cout << "Enter second number: ";
     cin >> num2;
+    }
 
-    switch (op) {
-        case '+': cout << "Result: " << num1 + num2 << endl;
+    switch (method) {
+        case 1: cout << "Result: " << num1 + num2 << endl;
         break;
-        case '-': cout << "Result: " << num1 - num2 << endl;
+        case 2: cout << "Result: " << num1 - num2 << endl;
         break;
-        case '*': cout << "Result: " << num1 * num2 << endl;
+        case 3: cout << "Result: " << num1 * num2 << endl;
         break;
-        case '/':
+        case 4:
             if (num2 != 0) cout << "Result: " << num1 / num2 << endl;
             else cout << "Error: Division by zero!\n";
             break;
+        case 5:
+        for(int i = 1; i <= 4; i++){
+            cout << "Enter first number: ";
+            cin >> num1;
+            cout << "Enter second number: ";
+            cin >> num2;
+
+            switch(i){
+                case 1: cout << "Result: " << num1 + num2 << endl;
+        break;
+        case 2: cout << "Result: " << num1 - num2 << endl;
+        break;
+        case 3: cout << "Result: " << num1 * num2 << endl;
+        break;
+        case 4:
+            if (num2 != 0) cout << "Result: " << num1 / num2 << endl;
+            else cout << "Error: Division by zero!\n";
+            break;
+            }
+        }
+        break;
         default: cout << "Invalid operator.\n";
     }
 }
