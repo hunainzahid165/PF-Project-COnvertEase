@@ -212,7 +212,7 @@ void unitConversion() {
             break;
 
         case 8:
-            for (int i = 1; i <= 7; ++i) {
+            for (int i = 1; i <= 7; i++) {
                 cout << "\nConversion " << i << ":\n";
                 cout << "Enter value: ";
                 cin >> value;
