@@ -240,7 +240,7 @@ void unitConversion() {
                         break;
                 }
             }
-        break:
+        break;
         
         default:
             cout << "Invalid choice.\n";
